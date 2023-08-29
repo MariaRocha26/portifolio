@@ -1,0 +1,22 @@
+header{
+    background-color: #292949;
+    padding: 20px 10vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+header nav ul li a{
+    text-decoration: none;
+    color: #f6dbf6;
+    gap: 100px;
+}
+header nav ul{
+    display: flex;
+    list-style: none;
+    gap: 15px;
+}
+.LogoCabecalho{
+    width: 150px;
+    height: auto;   
+    margin-left: 10px;
+}
