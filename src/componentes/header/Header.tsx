@@ -15,11 +15,11 @@ function Header(){
                     </li>
 
                     <li>
-                        <a href="#">Notícia</a>
+                        <a href="#">Fotos</a>
                     </li>
 
                     <li>
-                        <a href="#">Contato</a>
+                        <a href="#">Parcerias</a>
                     </li>
                     
                 </ul>

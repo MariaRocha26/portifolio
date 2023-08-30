@@ -3,9 +3,7 @@
 
 img{
     width: 250px;
-    height: auto;
-    margin-left: 50px;
-    margin-top: 50px;
+    height:fit-content;
 }
 
 *{
@@ -19,12 +17,15 @@ footer{
   color: #f6dbf6;
   background-color: #292949;
   margin-top: 10%;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
 }
 
 .rodape{
   display:flex;
   color:#f6dbf6;
-  gap: 35px;
+  justify-content: space-between;
   padding: 140px 0px 50px 0px;
 }
 
@@ -52,18 +53,12 @@ footer{
   margin-bottom:10px
 }
 
-.redesSociais{
-  display:flex;
-  flex-direction:row
-}
-
 .redesSociais img{
   width:30px;
 }
  
 .footer-copyright{
   color:white;
-  margin-top: 200px;
   text-align: center;
   justify-content: center;
 }
