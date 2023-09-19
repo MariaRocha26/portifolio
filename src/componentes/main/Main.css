@@ -29,3 +29,25 @@ color: #292949;
     margin-top: 15%;
     padding: 50px;
 }
+
+.content-main{
+    padding: 60px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 30px;
+    row-gap: 30px;
+    justify-content: center;
+}
+
+.barra-pesquisa{
+    height: 30px;
+    border: 1 px solid #4d4848;
+    width: 300px;
+}
+
+.barra-pesquisa:focus-visible{
+    outline: 1px solid #ff78cb;
+}
+.pesquisa{
+    padding: 50px;
+}
