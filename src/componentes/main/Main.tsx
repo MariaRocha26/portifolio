@@ -11,31 +11,66 @@ type ProjetosType = {
 }
 
 export default function Main(){
-    const [texto,setTexto] = useState("Ritinha")
+    const [texto,setTexto] = useState("")
 
     const projetos:ProjetosType[] = [
         {
             id: 1,
-            titulo:"Barbie",
-            resumo:"Depois de ser expulsa da Barbieland por ser uma boneca de aparência menos do que perfeita, Barbie parte para o mundo humano em busca da verdadeira felicidade.",
-            imagem:"/barbie-capa.png" 
+            titulo:"Projeto de Robótica",
+            resumo:"Participei do projeto de robótica durante dois anos. Durante esse período, fui estagiária e bolsista, então minhas tarefas estavam relacionadas com os circuitos e cuidado com as redes sociais. ",
+            imagem:"/robotica.jpg" 
         },
         {
             id: 2,
-            titulo:"Barbie Castelo de Diamante",
-            resumo:"Liana e Alexa saem da sua cabana humilde para vender flores na vila e acabam conhecendo Melody, a guardiã do Castelo de Diamante. As duas decidem ajudá-la a impedir que a chave do castelo seja roubada por Lídia, uma musa egoísta.",
-            imagem:"/castelo-diamante.png"
+            titulo:"Olimpíada Brasileira de Robótica",
+            resumo:"Em 2017, como estudante de escola estadual e integrante do grupo Titans da Robótica, eu participei da OBR e recebi medalha de honra ao mérito. Em 2021, como estudante do IFMS e integrante do grupo de robótica, participei novamente da OBR e recebi medalha de honra ao mérito.",
+            imagem:"/obr.jpg"
         },
         {
         id: 3,
-        titulo:"Barbie Escola de Princesas",
-        resumo:"Blair é uma garota simples e órfã que foi sorteada para estudar na exclusiva Escola de Princesas. A escola é um lugar incrível, onde as meninas aprendem dança, etiqueta, arte e outras habilidades indispensáveis a uma princesa. Blair adora suas aulas, suas novas fadinhas assistentes e suas novas amigas, as princesas Hadley e Isla. Porém, quando a malvada Dama Devin desconfia que Blair é a princesa e herdeira desaparecida, ela faz de tudo para impedir que Blair assuma o trono.",
-        imagem:"/escola-de-princesas.png"
-        }
+        titulo:"Projeto de Iniciação Científica",
+        resumo:"Participei, com minha amiga Luana Trindade e os professores Guilherme Terenciani e Gustavo Targino, do projeto de iniciação científica sobre investigação do método de integração de Monte Carlo para dados discretos.",
+        imagem:"/ic.jpg"
+        },
+        {
+        id: 4,
+        titulo:"Semana do Meio Ambiente - IFMS",
+        resumo:"Participei como monitora da Semana do Meio Ambiente de 2023. Foto referente a visita ao Parque Estadual das Várzeas do Rio Ivinhema. Eu e os outros alunos presentes nessa visita estavámos plantando árvores.",
+        imagem:"/semana-meio-ambiente.jpg"
+        },
+        {
+        id: 5,
+        titulo:"PODCAST - Pod Isso no IF?",
+        resumo:"Sou uma das hosts do projeto de podcast do IFMS. Foto referente ao dia que o entrevistado foi o candidato a reitoria Guilherme.",
+        imagem:"/podcast.jpg"
+        },
+        {
+        id: 6,
+        titulo:"Estágio na TV MAIS",
+        resumo:"O IFMS fez uma parceria com a TV MAIS, onde eles cedem o espaço para a gravação do Podcast. Também gostaram do meu desempenho como entrevistadora e me chamaram para fazer estágio na TV, dessa forma, eu participo dos ao vivo e também faço entrevistas em eventos.",
+        imagem:"/tv.jpg"
+        },
+        {
+        id: 7,
+        titulo:"Viagem ao RJ - representando o IFMS",
+        resumo:"Em 2023 aconteceu o sexto Encontro Nacional dos Estudantes de Ensino Técnico. Cada campus do IFMS ficou responsável por escolher um represente para ir ao Rio de Janeiro neste encontro e eu fui a escolhida do Campus Naviraí. Foi um prazer imenso ir até o Rio de Janeiro e desfrutar das lindas coisas que a cidade e o encontro ofertou. (Também foi minha primeira vez viajando de avião).",
+        imagem:"/RJ.jpg"
+        },
+        {
+        id: 8,
+        titulo:"Festa Julina do IFMS",
+        resumo:"Em julho de 2023 aconteceu a Festa Julina do IFMS. As turmas de terceiro ano do ensino médio se reuniram para fazer uma barraca de venda de doces para arrecadação de dinheiro para nossa formatura.",
+        imagem:"/festa-julina.jpg"
+        },
+        {
+        id: 9,
+        titulo:"Visita Técnica à Foz do Iguaçu",
+        resumo:"Em 2023 as turmas do terceiro ano do curso técnico em informática para a internet foram para Foz do Iguaçu em uma visita técnica à Usina de Itaipu.",
+        imagem:"/visita-tecnica.jpg"
+        },
 
     ]
     function mudaTexto(e:React.ChangeEvent<HTMLInputElement>){
-        console.log(e.target.value);
         setTexto(e.target.value)
     }
     return(
@@ -62,27 +97,23 @@ export default function Main(){
             </div>
 
             <div className="pesquisa">
-            <p>Buscar Projeto</p>
-            <input className="barra-pesquisa" type="text" onChange={mudaTexto}/>
-            <div>
-                <p className='texto-digitado'>pesquisa: {texto}</p>
+                <p>Buscar mais informações sobre Maria Rita</p>
+                <input type="text" className="barra-pesquisa" onChange={mudaTexto}/>
             </div>
-        </div>
+        
             
 
         <div className="content-main">
-            {projetos.filter((projeto)=>projeto.titulo.toLowerCase().includes(texto)).map((projeto:ProjetosType)=>
-            <Projeto key={projeto.id}
+            {projetos.filter((projeto)=>projeto.titulo.toLowerCase().includes(texto.toLowerCase())
+            )
+            .map((projeto) => (
+                <Projeto key={projeto.id}
                    titulo={projeto.titulo}
                    resumo={projeto.resumo}
                    imagem={projeto.imagem}
                    />
-                )
-            }
+                ))}
             </div>
-        
-            
-            
         </main>
         </>
     )
