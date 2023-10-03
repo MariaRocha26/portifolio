@@ -1,4 +1,5 @@
 import './Footer.css'
+import { Link } from 'react-router-dom'
 import Logo from '../../assets/logo-portifolio.png'
 
 function Footer() {
@@ -29,9 +30,9 @@ function Footer() {
 
         <ul className="footer-list">
 
-          <li>
-            <h3>Contatos</h3>
-          </li>
+                    <li>
+                    <Link to="/contato">Contato</Link>
+                    </li>
 
           <li>
             <a href="#" className="footer-link">Whatsapp</a>
