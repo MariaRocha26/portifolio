@@ -24,18 +24,18 @@ export default function Contato(){
         <section>
             <h2>Formulário para Contato</h2>
             <form action="" method="post">
-                <label>Nome</label>
+                <p>Nome: {nome}</p>
                 <input type="text" name="name" placeholder="Digite seu nome" autoComplete='off' onChange={mudaTexto0}></input>
-                <p>nome:{nome}</p>
-                <label>Sobrenome</label>
+                
+                <p>Sobrenome: {sobrenome}</p>
                 <input type="text" name="name" placeholder="Digite seu sobrenome" autoComplete='off' onChange={mudaTexto1}></input>
-                <p>sobrenome:{sobrenome}</p>
-                <label>Email</label>
+                
+                <p>Email: {email}</p>
                 <input type="email" name="email" placeholder="Digite seu email" onChange={mudaTexto2}></input>
-                <p>email:{email}</p>
-                <label>Mensagem</label>
+                
+                <p>Mensagem: {mensagem}</p>
                 <input type="text" name="message" placeholder="Digite sua mensagem" onChange={mudaTexto3}></input>
-                <p>mensagem:{mensagem}</p>
+                
                 <button type='submit'>Enviar</button>
             </form>
         </section>
